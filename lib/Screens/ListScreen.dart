@@ -16,7 +16,17 @@ class _StudentListScrenState extends State<StudentListScren> {
         stream: FirebaseFirestore.instance.collection("Student").snapshots(),
         builder: (context, snapshots) {
           return Scaffold(
-              appBar: AppBar(),
+              appBar: AppBar(
+                actions: [
+                  Hero(
+                    tag: "logo",
+                    child: Container(
+                      padding: EdgeInsets.all(9),
+                      child: Image.asset("images/logo.jfif"),
+                    ),
+                  ),
+                ],
+              ),
               body: (snapshots.data != null)
                   ? ListView.builder(
                       itemCount: snapshots.data?.docs.length,

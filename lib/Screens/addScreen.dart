@@ -18,7 +18,17 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          Hero(
+            tag: "logo",
+            child: Container(
+              padding: EdgeInsets.all(9),
+              child: Image.asset("images/logo.jfif"),
+            ),
+          ),
+        ],
+      ),
       body: ListView(children: [
         TextField(
           onChanged: (value) {

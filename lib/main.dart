@@ -1,10 +1,13 @@
 import 'package:fire_app/Screens/ListScreen.dart';
+import 'package:fire_app/Screens/ProfileScreen.dart';
+import 'package:fire_app/Screens/RegisterScreen.dart';
 import 'package:fire_app/Screens/addScreen.dart';
 import 'package:fire_app/loader.dart';
 import 'package:fire_app/Screens/updateScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'Screens/WelComeScreen.dart';
+import 'Screens/loginScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +33,10 @@ class MyApp extends StatelessWidget {
       routes: {
         "add": (context) => AddStudentScreen(),
         "list": (context) => StudentListScren(),
-        "update": (context) => UpdateStudentScreen()
+        "update": (context) => UpdateStudentScreen(),
+        "login": (context) => LoginScreen(),
+        "register": (context) => RegisterScreen(),
+        "profile": (context) => ProfileScreen(),
       },
     );
   }
